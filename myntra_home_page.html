@@ -1,1 +1,441 @@
 
+<!-- myntra_Home-page  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>self clone to myntra Home Page</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            font-family: Arial;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 14px;
+            align-items: center;
+            background-color: rgb(246, 245, 245);
+            font-weight: bold;
+            border: 1px lightgray;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .brand-name {
+            color: red;
+            font-size: 40px;
+            font-family: Brush Script MT;
+
+        }
+
+        .nav li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .search-bar {
+            width: 500px;
+            border: 1px solid rgb(211, 211, 211);
+            padding: 8px;
+            margin: 9px;
+            border-radius: 5px;
+            font-weight: 100;
+        }
+
+        .shortcuts {
+            width: 150px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .shortcut-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: rgb(12, 28, 7);
+            cursor: pointer;
+
+        }
+
+        li sup {
+            font-size: 10px;
+            color: rosybrown;
+        }
+
+        li:hover {
+            background-color: rgb(244, 240, 240);
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-color: rgb(221, 162, 85);
+            text-decoration-thickness: 3px;
+
+        }
+
+        section option {
+            display: none;
+            font-size: 12px;
+            padding: 5px;
+        }
+
+        section option:hover {
+            display: inline;
+            background-color: white;
+            border: 1px solid lightgray;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        aside {
+            font-size: 20px;
+            position: fixed;
+            top: 50%;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: thistle;
+            color: rgb(19, 3, 50);
+            padding: 5px;
+            gap: 15px;
+        }
+
+        aside span:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        article {
+            /* margin: 10px; */
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid lightgray;
+            padding: 5px;
+            background-color: rgb(255, 248, 220);
+        }
+
+        article marquee :hover {
+            background-color: rgb(255, 235, 205);
+            cursor: pointer;
+        }
+
+        article sup {
+            color: red;
+            font-size: 12px;
+            font-weight: bold;
+            background-color: yellowgreen;
+        }
+
+
+        .banner0 {
+            width: 90vw;
+            margin-left: 50px;
+        }
+
+        .banner-0 {
+            width: 80vw;
+        }
+
+
+        .ads {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .banner1 {
+            width: 48vw;
+        }
+
+        .banner2 {
+            width: 48vw;
+        }
+
+        .offers {
+            width: 1425.9px;
+            height: auto;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid gray;
+            justify-content: center;
+        }
+
+        .banner3 {
+            width: 1425.9px;
+
+        }
+
+        .super-saver {
+            width: 900px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 300px;
+        }
+
+        .super-saver img {
+            width: 900px;
+            display: inline;
+        }
+
+        .price-crash img {
+            width: 1425px;
+            margin-left: 30px;
+        }
+
+        .shopBYcategory img {
+            width: 1420px;
+            margin-left: 30px;
+        }
+
+        .card {
+            width: 200px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 2px 2px 2px black;
+            padding: 10px;
+            background-image: linear-gradient(red, yellowgreen, white, green);
+            /* justify-content: center;
+            align-items: center; */
+            cursor: pointer;
+        }
+
+        .card-image {
+            width: 100%;
+            /* border-top-left-radius: 10px;
+            border-top-right-radius: 10px; */
+        }
+
+        .card-title {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .wear-offer {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px whitesmoke;
+        }
+
+        .card-footer {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .Myntra-cards {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            margin-left: 14px;
+            margin-right: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+
+
+
+            <nav class="nav">
+                <ul>
+                    <li><span class="brand-name">M</span></li>
+
+                    <li>MEN</li>
+
+                    <li>WOMEN</li>
+
+                    <li>KIDS</li>
+
+                    <li>HOME</li>
+
+                    <li>BEAUTY</li>
+
+                    <li>GENZ</li>
+
+                    <li>STUDIO<SUP>NEW</SUP></li>
+
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="search-bar">
+            <span class="bi bi-search"></span>
+            <span>search for products, brands and more</span>
+        </div>
+
+
+        <div class="shortcuts">
+            <div>
+                <span class="bi bi-person"></span> <br>
+                <span class="shortcut-title">Profile</span>
+                <section>
+                    <option value="LogIn">Login</option>
+                    <option value="SignUp">SignUp</option>
+                </section>
+            </div>
+            <div>
+                <span class="bi bi-heart"></span> <br>
+                <span class="shortcut-title">Wishlist</span>
+            </div>
+            <div>
+                <span class="bi bi-bag"></span> <br>
+                <span class="shortcut-title">Bag</span>
+            </div>
+        </div>
+
+    </header>
+
+    <article>
+        <marquee behavior="" direction="">
+            <span style="font-size: 14px; font-weight: bold;"><sup>NEW</sup> Big Fashion Sale! Up to 70% off | Extra 10%
+                off on
+                Electronics
+                with
+                HDFC Bank Cards | Use Code: HDFC10TQ </span>
+        </marquee>
+    </article>
+
+    <aside>
+        <span class="bi bi-facebook"></span>
+        <span class="bi bi-instagram"></span>
+        <span class="bi bi-twitter-x"></span>
+        <span class="bi bi-youtube"></span>
+    </aside>
+
+    <div class="myntra-cards-images">
+        <div class="banner-0"><img class="banner0" src="./images/banner0.webp" alt="offers banner">
+        </div>
+
+        <div class="ads">
+            <img src="./images/banner1.webp" alt="sponsored_Ad's" class="banner1">
+
+            <img src="./images/banner2.webp" alt="sponsored_Ad's" class="banner2">
+        </div>
+
+        <div class="offers">
+            <img src="./images/banner3.gif" align="center" alt="Cards&UPI offers" class="banner3">
+        </div>
+
+        <div class="super-saver">
+            <img src="./images/banner4.webp" alt="offer for save ammount">
+        </div>
+
+        <div class="price-crash">
+            <img src="./images/banner5.webp" alt="price cut and price-crash">
+        </div>
+
+        <div class="shopBYcategory">
+            <img src="./images/banner6.webp" alt="shopBYcategory">
+        </div>
+
+        <div class="Myntra-cards">
+            <div class="card">
+                <div class="card-header">
+                    <img src="./images/casual wear.png" alt="casual wear" class="card-image">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Casual Wear</div>
+                    <div class="wear-offer">40-80% OFF</div>
+                </div>
+                <div class="card-footer">
+                    Shop Now
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="./images/ethnic wear.png" alt="casual wear" class="card-image">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Casual Wear</div>
+                    <div class="wear-offer">40-50% OFF</div>
+                </div>
+                <div class="card-footer">
+                    Shop Now
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="./images/everywear.png" alt="casual wear" class="card-image">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Casual Wear</div>
+                    <div class="wear-offer">40-60% OFF</div>
+                </div>
+                <div class="card-footer">
+                    Shop Now
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="./images/kids wear.png" alt="casual wear" class="card-image">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Casual Wear</div>
+                    <div class="wear-offer">20-40% OFF</div>
+                </div>
+                <div class="card-footer">
+                    Shop Now
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="./images/mens activewear.png" alt="casual wear" class="card-image">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Casual Wear</div>
+                    <div class="wear-offer">40-70% OFF</div>
+                </div>
+                <div class="card-footer">
+                    Shop Now
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="./images/mens ethnic.png" alt="casual wear" class="card-image">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Casual Wear</div>
+                    <div class="wear-offer">30-80% OFF</div>
+                </div>
+                <div class="card-footer">
+                    Shop Now
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="./images/office wear.png" alt="casual wear" class="card-image">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Casual Wear</div>
+                    <div class="wear-offer">20-70% OFF</div>
+                </div>
+                <div class="card-footer">
+                    Shop Now
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
